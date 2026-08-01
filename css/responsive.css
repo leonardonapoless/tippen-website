@@ -1,0 +1,314 @@
+@media (max-width: 900px) {
+  .hero {
+    padding: 2.5rem 1.25rem 2.5rem;
+  }
+
+  .hero-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(2.4rem, 10.5vw, 5rem);
+    margin: 0;
+  }
+
+  .letter-row {
+    display: flex;
+    gap: clamp(0.2rem, 1.2vw, 0.4rem);
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .key {
+    padding: 0.12em 0.3em;
+    min-width: 1.05em;
+    box-shadow: 4px 4px 0 0 var(--text-dark);
+  }
+
+  .hero .theme-switch-wrapper {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 0.25rem;
+    z-index: 10;
+  }
+
+  .light-switch,
+  .switch-icon,
+  .switch-icon img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .theme-label {
+    font-size: 0.72rem;
+    width: 52px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  .hero-bottom-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .hero-sub {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .specs-text-desktop {
+    display: none;
+  }
+
+  .specs-text-mobile {
+    display: inline;
+  }
+
+  .specs-badge {
+    white-space: nowrap;
+    font-size: clamp(0.58rem, 2.5vw, 0.72rem);
+    transform: rotate(1.5deg);
+    max-width: 100%;
+    padding: 0.65rem 1.6rem;
+    margin: 0 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero-credits {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .demo-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .typing-field {
+    width: 100%;
+  }
+
+  .field-label {
+    text-align: center;
+  }
+
+  .field-body {
+    justify-content: center;
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    height: 80px;
+    padding: 0 1rem;
+  }
+
+  .install-section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .install-cols {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .install-col {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border-right: none;
+    border-bottom: var(--border-thick);
+    padding: 2.25rem 1.25rem;
+  }
+
+  .install-col:last-child {
+    border-bottom: none;
+  }
+
+  .col-header {
+    text-align: left;
+    align-items: flex-start;
+    min-height: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  .install-note,
+  .alt-install {
+    text-align: left;
+  }
+
+  .manifesto {
+    padding: 3.5rem 1.25rem;
+    text-align: left;
+  }
+
+  .manifesto-text {
+    font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+    text-align: left;
+  }
+
+  .memory-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .section-title {
+    text-align: left;
+  }
+
+  .mem-row {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    padding: 0.85rem 1.1rem;
+  }
+
+  .mem-name {
+    width: auto;
+    flex: 1;
+    font-size: 0.9rem;
+  }
+
+  .mem-val {
+    width: auto;
+    text-align: right;
+    font-size: 0.9rem;
+  }
+
+  .mem-bar-container {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 14px;
+    order: 3;
+    margin-top: 0.25rem;
+  }
+
+  .cta-section {
+    flex-direction: column;
+    padding: 4rem 1.25rem;
+    text-align: center;
+  }
+
+  .philosophy-box {
+    transform: rotate(-2.5deg);
+    width: auto;
+    max-width: 100%;
+    padding: 1.1rem 1.2rem;
+  }
+
+  .philosophy-box p {
+    white-space: nowrap;
+    font-size: clamp(0.7rem, 3.6vw, 1.3rem);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    gap: 1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subpage-nav {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subpage-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .subpage-nav .theme-switch-wrapper {
+    position: static;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .donate-section,
+  .contributing-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .donate-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: 2rem;
+  }
+
+  .donate-card {
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: clamp(2rem, 11vw, 2.7rem);
+  }
+
+  .key {
+    padding: 0.1em 0.24em;
+    min-width: 0.95em;
+    box-shadow: 3px 3px 0 0 var(--text-dark);
+  }
+
+  .hero .theme-switch-wrapper {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .light-switch,
+  .switch-icon,
+  .switch-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .theme-label {
+    width: 46px;
+    font-size: 0.68rem;
+  }
+}

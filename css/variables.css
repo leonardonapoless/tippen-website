@@ -1,0 +1,30 @@
+:root {
+  --bg: #f2f2f2;
+  --dark-bg: #111111;
+  --text-dark: #1a1a1a;
+  --text-mid: #555555;
+  --text-light: #888888;
+  --dark-text: #f2f2f2;
+  --accent: #7ca982;
+  --grid-line: #d0d0d0;
+  --card-bg: #ffffff;
+
+  --font-mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+
+  --border-thick: 4px solid var(--text-dark);
+  --border-thin: 2px solid var(--text-dark);
+  --shadow-offset: 8px;
+}
+
+[data-theme="dark"] {
+  --bg: #121214;
+  --dark-bg: #09090b;
+  --text-dark: #f3f4f6;
+  --text-mid: #9ca3af;
+  --text-light: #6b7280;
+  --dark-text: #f3f4f6;
+  --accent: #68a678;
+  --grid-line: #2a2d34;
+  --card-bg: #1a1b1e;
+}

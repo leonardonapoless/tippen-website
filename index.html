@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tippen — tiny text expander for macOS</title>
+  <meta name="description" content="A tiny text expander for macOS written in pure C. 4.9MB RAM. No Electron. No subscriptions.">
+  <meta name="author" content="Leonardo Nápoles">
+  <meta name="theme-color" content="#f2f2f2">
+  
+  <meta property="og:title" content="tippen — tiny text expander for macOS">
+  <meta property="og:description" content="Lightning-fast, ultra-lightweight text expander for macOS written in C.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-title-row">
+        <h1>
+          <span class="letter-row">
+            <span class="key">t</span>
+            <span class="key">i</span>
+            <span class="key">p</span>
+            <span class="key">p</span>
+            <span class="key">e</span>
+            <span class="key">n</span>
+          </span>
+        </h1>
+        <div class="theme-switch-wrapper">
+          <button class="light-switch" id="themeToggle" type="button" aria-label="Toggle theme" title="Theme: SYSTEM" data-state="system">
+            <span class="switch-icon" id="themeSwitchIcon">
+              <img src="assets/light-switch/switch-auto.svg" width="64" height="64" alt="Theme Switch">
+            </span>
+          </button>
+          <span class="theme-label" id="themeLabel">AUTO</span>
+        </div>
+      </div>
+
+      <div class="hero-bottom-row">
+        <p class="hero-sub">keystrokes into sentences. instantly.</p>
+        <div class="hero-right">
+          <div class="specs-badge">
+            <span class="specs-text-desktop">a lightning-fast, ultra-lightweight text expander for macOS</span>
+            <span class="specs-text-mobile">a fast, lightweight text expander for macOS</span>
+            <img src="assets/icons/finder.svg" width="20" height="20" alt="macOS Finder" class="finder-icon">
+          </div>
+          <div class="hero-credits">
+            <a href="donate.html" class="donate-link">[ DONATE ]</a>
+            <a href="https://github.com/leonardonapoless/tippen" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="GitHub Repository">
+              <img src="assets/icons/github.svg" width="20" height="20" alt="GitHub" class="github-icon">
+            </a>
+            <span class="tag">GPLv3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="demo-section" aria-label="Interactive Demo">
+      <div class="typing-field">
+        <div class="field-label">start typing anywhere...</div>
+        <div class="field-body">
+          <span class="typed" id="demoTyped"></span><span class="cursor">|</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-section">
+      <div class="install-cols">
+        <div class="install-col">
+          <div class="col-header">
+            <h3>INSTALL</h3>
+            <span class="col-subtext">VIA HOMEBREW</span>
+          </div>
+          <div class="code-block">
+            <div class="code-lines">
+              <code>brew tap leonardonapoless/tap</code>
+              <code>brew trust leonardonapoless/tap</code>
+              <code>brew install tippen</code>
+            </div>
+            <button class="copy-btn" type="button" aria-label="Copy installation commands" title="Copy code">
+              <img src="assets/icons/copy.svg" width="16" height="16" alt="Copy">
+            </button>
+          </div>
+          <div class="alt-install">
+            <span>No Homebrew? Get it at <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" class="alt-link">brew.sh</a> or run:</span>
+            <div class="code-block brew-install-block">
+              <div class="code-lines">
+                <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+              </div>
+              <button class="copy-btn" type="button" aria-label="Copy Homebrew install command" title="Copy code">
+                <img src="assets/icons/copy.svg" width="16" height="16" alt="Copy">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-col">
+          <div class="col-header">
+            <h3>CONFIGURE</h3>
+          </div>
+          <div class="code-block">
+            <div class="code-lines">
+              <code>open -a TextEdit ~/.config/tippen/config.txt</code>
+            </div>
+            <button class="copy-btn" type="button" aria-label="Copy configuration command" title="Copy code">
+              <img src="assets/icons/copy.svg" width="16" height="16" alt="Copy">
+            </button>
+          </div>
+          <div class="config-preview">
+            <span>@@ = myemail@gmail.com</span>
+            <span>/brb = Be right back!</span>
+            <span>/date = %Y-%m-%d</span>
+            <span>/shrug = ¯\_(ツ)_/¯</span>
+          </div>
+        </div>
+
+        <div class="install-col">
+          <div class="col-header">
+            <h3>TYPE</h3>
+          </div>
+          <p class="install-note">
+            save your config.<br>
+            tippen reloads instantly.<br>
+            no restart needed.<br>
+            ever.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-inner">
+        <p class="manifesto-text">
+          no electron. no javascript runtime. no dependencies. no bloat. no subscription. no account. no telemetry. no UI.
+          <br>
+          <strong>just a single binary and a plain text config file.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="memory-section">
+      <h2 class="section-title">RAM AT IDLE</h2>
+      <div class="memory-list">
+        <div class="mem-row ours">
+          <span class="mem-name">tippen</span>
+          <span class="mem-bar-container"><div class="mem-bar" style="width: 3.2%;"></div></span>
+          <span class="mem-val">4.9 MB</span>
+        </div>
+        <div class="mem-row">
+          <span class="mem-name">aText</span>
+          <span class="mem-bar-container"><div class="mem-bar" style="width: 26.6%;"></div></span>
+          <span class="mem-val">~40 MB</span>
+        </div>
+        <div class="mem-row">
+          <span class="mem-name">Espanso</span>
+          <span class="mem-bar-container"><div class="mem-bar" style="width: 80%;"></div></span>
+          <span class="mem-val">~120 MB</span>
+        </div>
+        <div class="mem-row">
+          <span class="mem-name">TextExpander</span>
+          <span class="mem-bar-container"><div class="mem-bar" style="width: 100%;"></div></span>
+          <span class="mem-val">~150 MB</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="philosophy-box">
+        <p>"do one thing and do it well"</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="https://github.com/leonardonapoless/tippen" target="_blank" rel="noopener noreferrer" class="cta-btn">[ VIEW ON GITHUB ]</a>
+        <a href="donate.html" class="cta-btn">[ DONATE ]</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
